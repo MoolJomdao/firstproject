@@ -18,6 +18,11 @@ repositories {
 }
 
 dependencies {
+
+	//implementation ("mysql:mysql-connector-java:8.0.40")
+	implementation ("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation ("com.mysql:mysql-connector-j")
+
 	//Lombok 의존성 추가
 	implementation("org.projectlombok:lombok:1.18.30")
 	annotationProcessor("org.projectlombok:lombok")
