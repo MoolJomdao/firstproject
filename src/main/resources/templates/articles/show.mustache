@@ -1,0 +1,22 @@
+{{>layouts/header}}
+
+{{#article}}
+    <form class="container">
+        <div class="mb-3">
+            <label class="form-label">ID : {{id}}</label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">제목</label>
+            <input class="form-control" rows="3" name="title" value={{title}} disabled>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">내용</label>
+            <textarea class="form-control" rows="3" name="content" disabled>{{content}}</textarea>
+        </div>
+        <a href="/articles" class="btn btn-primary">돌아가기</a>
+        <a href="/articles/{{id}}/edit" class="btn btn-primary" style="float:right;">글수정</a>
+    </form>
+{{/article}}
+
+{{>layouts/footer}}

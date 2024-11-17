@@ -1,0 +1,26 @@
+{{>layouts/header}}
+
+<!--부트스트랩 기본 테이블-->
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#articleList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/articleList}}
+    </tbody>
+</table>
+
+<a href="/hi" class="btn btn-primary">돌아가기</a>
+<a href="/articles/new" class="btn btn-primary" style="float:right;">글쓰기</a>
+
+{{>layouts/footer}}
