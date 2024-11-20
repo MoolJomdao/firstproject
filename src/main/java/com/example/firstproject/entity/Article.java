@@ -19,4 +19,12 @@ public class Article {
     private String title;
     @Column
     private String content;
+
+    public void path(Article articleEntity) {
+        if(articleEntity.getTitle() != null)
+            this.title = articleEntity.getTitle();
+
+        if(articleEntity.getContent() != null)
+            this.content = articleEntity.getContent();
+    }
 }
